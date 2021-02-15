@@ -12,9 +12,9 @@
         }
     },
     "functions": [],
-    "variables": {},
+    "variables": {"storageAccountName": "[concat('store', uniqueString(resourceGroup().id))]"},
     "resources": [{
-        "name": "[parameters('storageAccountName')]",
+        "name": "[variables('storageAccountName')]",
         "type": "Microsoft.Storage/storageAccounts",
         "apiVersion": "2019-06-01",
         "tags": {
